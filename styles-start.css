@@ -1,0 +1,91 @@
+@media screen and (min-width:1400px) {
+  #warp {
+     -webkit-transform:scale(1.2);
+     -webkit-transform-origin:50% 0%;
+   transform:scale(1.2);
+   transform-origin:50% 0%;
+   }
+ }
+
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+  background-color: rgb(245, 234, 214);
+  -webkit-font-smoothing: antialiased;
+}
+
+.principal {
+  width: 66%;
+  background-color: white;
+  margin: auto;
+  height: 100%;
+  display: block;
+}
+
+.elementor-container {
+  margin-right: auto;
+  margin-left: auto;
+  position: relative;
+  min-height: 780px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+a {
+  margin: 0;
+  list-style-type: none;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding: 7px 8px;
+  transition: all 0.244s cubic-bezier(1, -0.01, 0, 1);
+  border-radius: 40px;
+  text-decoration: none;
+  font-family:'Segoe UI';
+}
+
+a:hover:not(.active) {
+  background-color: rgba(0, 255, 191, 0.082);
+}
+
+.li-salon {
+  margin: 0;
+  width: 140px;
+  display: block;
+  transition: all 0.244s linear;
+  background-color: rgb(139, 131, 255);
+  border-radius: 40px;
+  margin-bottom: 5px;
+}
+
+.li-delivery {
+  margin: 0;
+  width: 140px;
+  display: block;
+  transition: all 0.244s linear;
+  background-color: rgb(131, 255, 131);
+  border-radius: 40px;
+}
+
+.texto-bienvenida {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.texto-bienvenida h1 {
+  font-size: 40px;
+  margin-bottom: 42px;
+}
+
+.texto-bienvenida p {
+  text-align: center;
+  margin-bottom: 10px;
+}
