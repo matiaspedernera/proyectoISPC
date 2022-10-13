@@ -1,49 +1,22 @@
-body{
-    font-family: 'Montserrat', sans-serif;
-}
+
 
 header {
-    background-color: #EBDEF0;
-    padding: 20px 0;
-}
-.caja{
-    width: 940px;
-    position: relative;
-    margin: 0 auto;
+    background-color:#1B2430;
+    padding: 5px 0;
+    height: 180px;
 }
 nav{
-    position: absolute;
-    top:110px;
-    right: 0;
-    
-
+  margin-left: 3%;
+  margin-top: 5px;
+  
 }
 
-nav li{
-    display: inline;
-    margin: 0 0 0 15px;
-}
-
-nav a{
-    text-transform: uppercase;
-    color: #000000;
-    font-weight: bold;
-    font-size: 22px;
-    text-decoration: none;
-}
-
-nav a:hover{
-    color: #63666f;
-    text-decoration: underline;
-}
 main{
-    /*background-color: #c78c19;*/
-    padding: 20px;
+   
+    padding: 40px;
 }
 footer{
     text-align: center;
-    /*background: url(/proyectoISPC/imagenes/bg.jpg);*/
-    
     padding:50px;
 }
 .copyright{
@@ -51,13 +24,15 @@ footer{
     font-size: 13px;
     margin:5px;
 }
-/* carrusel de imagenes*/
+
+
+/**** carrusel de imagenes ****/
 
 .slide {
     position: relative;
     box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
     margin-top: 0px;
-}
+    }
 .slide-inner {
     position: relative;
     overflow: hidden;
@@ -158,14 +133,9 @@ footer{
     text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.33), 
          -1px 0px 2px rgba(255, 255, 255, 0);
 }
-/* botones */
-.buttons{
-    position: relative;
-    align-items: center;
-    margin: 26em;
-    display: inline;
-    width: 100%;
-}
+/**** botones de Principal ****/
+   
+
 button {
     background: black;
     border: 2px solid;
@@ -173,6 +143,7 @@ button {
     line-height: 1;
     margin: 0.5em 0 20px 20px;
     padding: 1em 2em;
+    align-items: center;
     
   }
   button {
@@ -204,30 +175,52 @@ button {
           animation: pulse 1s;
   box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
 }
-/* carta*/
-.filtros{
-    position: relative;
+.columna{
+    margin: 5px;
+    width: 30%;
+ 
+
+    }
+.padre{
+    display: flex;
+    margin-left: 30%;
+    margin-right: 30%;
     
+}
+/*********** carta **************/
+.filtros{
+    display: flex;
+    
+         
+}
+.filtros button{
+    margin-left: 0px;
+    margin-right: 30px;
+}
+.filtros select{
+ width: 55%;
+ margin-left: 15px;
+ 
+}
+.filtros form{
+   width: 95%;
+    
+}
+
+
+.seccion{
+    margin: 0.5em;
+}
+#carta{
+    display: flex;
+}
+#cartaSection{
+    width: 80%;
+}
+#cartaAside{
+    width: 20%;
 }
 .carrito{
-    width: 250px;
-    height: 350px;
-    position: fixed;
-    right: 80px;
-    bottom: 20px;
-    background: #ef8f6e;
-    
-}
-.producto{
-    width: 450px;
-    height: 350px;
-    position: relative;
-    margin-top: 2em;
-    left: 5px;
-    bottom: 20px;
-    background: #897ede;
-}
-.comida{
-    width: 250px;
-    height: 250px;
+    position:fixed;
+    margin-left: 5em;
 }
