@@ -34,13 +34,13 @@
             <a class="nav-link active" aria-current="page" href="carta.html">Carta</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Nosotros</a>
+            <a class="nav-link" href="nosotros.html">Nosotros</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Contacto</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Usuario</a>
+            <a class="nav-link" href="#">Mi Perfil</a>
           </li>
         </ul>
       </div>
@@ -73,170 +73,271 @@
         </select>
       </div>
 
-      <div class="container seccion">
-        <div class="alert alert-primary" role="alert">
-          Sandwiches
-        </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card h-100">
-              <img src="imagenes/lomo.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Lomito Especial</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-              </div>
-              <div class="card-footer">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                  <button type="button" class="btn btn-dark disabled">$ 350.00</button>
-                  <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="imagenes/hamburguesas.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Hamburguesa Doble</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              </div>
-              <div class="card-footer">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                  <button type="button" class="btn btn-dark disabled">$ 350.00</button>
-                  <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="imagenes/hamburguesas2.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Hamburguesa Especial</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This card has even longer content than the first to show that equal height action.</p>
-              </div>
-              <div class="card-footer">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                  <button type="button" class="btn btn-dark disabled">$ 350.00</button>
-                  <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+     
 
-      <div class="container seccion">
-        <div class="alert alert-danger" role="alert">
-          Pizza y Empanadas
-        </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card h-100">
-              <img src="imagenes/pizza.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Pizza Muzzarella</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-              </div>
-              <div class="card-footer">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="button" class="btn btn-dark disabled">$ 350.00</button>
-                <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
+      <!-- acordion -->
+
+      <div class="accordion seccion" id="accordionExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingOne">
+            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              Pastas
+            </button>
+          </h2>
+          <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+             
+              <div class="container seccion">
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="imagenes/espagueti.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Espagueti</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                          content. This content is a little bit longer.</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="button" class="btn btn-dark disabled">$ 350.00</button>
+                        <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="imagenes/fetuchini.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Fetuccini</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="button" class="btn btn-dark disabled">$ 350.00</button>
+                        <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="imagenes/ravioles.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Ravioles</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                          content. This card has even longer content than the first to show that equal height action.</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="button" class="btn btn-dark disabled">$ 350.00</button>
+                        <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="imagenes/empanada.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Empanadas de Carne</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              </div>
-              <div class="card-footer">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="button" class="btn btn-dark disabled">$ 350.00</button>
-                <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
-              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="imagenes/pizza2.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Pizza Caprese</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This card has even longer content than the first to show that equal height action.</p>
-               </div>
-              <div class="card-footer">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="button" class="btn btn-dark disabled">$ 350.00</button>
-                <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
-              </div>
-              </div>
+            
+            
             </div>
           </div>
         </div>
-      </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingTwo">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              Pizzas y Empanadas
+            </button>
+          </h2>
+          <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+             
+              <div class="container seccion">
+                
+                <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="imagenes/pizza.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Pizza Muzzarella</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                          content. This content is a little bit longer.</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="button" class="btn btn-dark disabled">$ 350.00</button>
+                        <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="imagenes/empanada.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Empanadas de Carne</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="button" class="btn btn-dark disabled">$ 350.00</button>
+                        <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="imagenes/pizza2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Pizza Caprese</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                          content. This card has even longer content than the first to show that equal height action.</p>
+                       </div>
+                      <div class="card-footer">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                        <button type="button" class="btn btn-dark disabled">$ 350.00</button>
+                        <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingThree">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              Sandwiches
+            </button>
+          </h2>
+          <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+            
+              <div class="container seccion">
+                 <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="imagenes/lomo.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Lomito Especial</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                          content. This content is a little bit longer.</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                          <button type="button" class="btn btn-dark disabled">$ 350.00</button>
+                          <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="imagenes/hamburguesas.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Hamburguesa Doble</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                          <button type="button" class="btn btn-dark disabled">$ 350.00</button>
+                          <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="imagenes/hamburguesas2.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Hamburguesa Especial</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                          content. This card has even longer content than the first to show that equal height action.</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                          <button type="button" class="btn btn-dark disabled">$ 350.00</button>
+                          <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
 
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="headingFour">
+            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              Postres
+            </button>
+          </h2>
+          <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+            <div class="accordion-body">
+            
+              <div class="container seccion">
+                 <div class="row row-cols-1 row-cols-md-3 g-4">
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="imagenes/copa.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Copa Helada</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                          content. This content is a little bit longer.</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                          <button type="button" class="btn btn-dark disabled">$ 350.00</button>
+                          <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="imagenes/ensalada.jpeg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Ensalada Especial</h5>
+                        <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                          <button type="button" class="btn btn-dark disabled">$ 350.00</button>
+                          <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="card h-100">
+                      <img src="imagenes/tarta.jpg" class="card-img-top" alt="...">
+                      <div class="card-body">
+                        <h5 class="card-title">Tarta Helada</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
+                          content. This card has even longer content than the first to show that equal height action.</p>
+                      </div>
+                      <div class="card-footer">
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                          <button type="button" class="btn btn-dark disabled">$ 350.00</button>
+                          <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+        </div>
 
-      <div class="container seccion">
-        <div class="alert alert-dark" role="alert">
-          Pastas
-        </div>
-        <div class="row row-cols-1 row-cols-md-3 g-4">
-          <div class="col">
-            <div class="card h-100">
-              <img src="imagenes/espagueti.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Espagueti</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This content is a little bit longer.</p>
-              </div>
-              <div class="card-footer">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="button" class="btn btn-dark disabled">$ 350.00</button>
-                <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
-              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="imagenes/fetuchini.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Fetuccini</h5>
-                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
-              </div>
-              <div class="card-footer">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="button" class="btn btn-dark disabled">$ 350.00</button>
-                <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
-              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col">
-            <div class="card h-100">
-              <img src="imagenes/ravioles.jpg" class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title">Ravioles</h5>
-                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional
-                  content. This card has even longer content than the first to show that equal height action.</p>
-              </div>
-              <div class="card-footer">
-                <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button type="button" class="btn btn-dark disabled">$ 350.00</button>
-                <button type="button" class="btn btn-outline-success">Agregar al Carrito</button>
-              </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
 
 
@@ -244,13 +345,13 @@
 
     <aside id="cartaAside">
       <div class="container carrito ">
-        <div class="card" style="width: 18rem;">
+        <div class="card">
           <div class="card-body">
             <h5 class="card-title">Carrito de Pedidos</h5>
             <p class="card-text">Hamburguesa doble $1350.00</p>
             <p class="card-text">Hamburguesa especial $1350.00</p>
             <p class="card-text">total ------------ $2700.00</p>
-            <a href="#" class="btn btn-primary">Pagar</a>
+            <a href="#" class="btn btn-primary">Finalizar Pedido</a>
           </div>
         </div>
       
