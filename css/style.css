@@ -397,4 +397,14 @@ button a:visited {
   margin: 1vh 0 1vh 0;
 
 }
-
+.btn.custom-btn { /* boton de formulario contacto*//* boton de formulario contacto*/
+    padding: 12px 25px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: #ffffff;
+    background: #FF0000;
+    border: 2px solid #fbaf32;
+    border-radius: 5px;
+    transition: .5s;
+}
