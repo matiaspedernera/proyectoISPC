@@ -1,0 +1,83 @@
+@media screen and (min-width:1400px) {
+  #warp {
+     -webkit-transform:scale(1.2);
+     -webkit-transform-origin:50% 0%;
+   transform:scale(1.2);
+   transform-origin:50% 0%;
+   }
+ }
+
+body {
+  margin: 0;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Arial,Noto Sans,sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #000;
+  background-color: rgb(245, 234, 214);
+  -webkit-font-smoothing: antialiased;
+}
+
+.principal {
+  flex-direction: column;
+  margin: auto;
+  height: 100%;
+  display: flex;
+}
+
+.elementor-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+  justify-content: center;
+  position: absolute;
+  z-index: 5;
+}
+
+
+.bton {
+  width: 210px;
+  list-style-type: none;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  color: rgb(0, 0, 0);
+  font-size: 1.25rem;
+  text-align: center;
+  padding: 7px 57px;
+  transition: all 0.244s cubic-bezier(1, -0.01, 0, 1);
+  text-decoration: none;
+  font-family:'Segoe UI';
+}
+.botonsalon {
+  margin-top: 50px;
+  border-radius: 40px;
+}
+.botondelivery {
+  margin-top: 10px;
+  border-radius: 40px;
+}
+
+button:hover:not(.active) {
+  background-color: rgba(0, 255, 191, 0.082);
+}
+
+.texto-bienvenida h1 {
+  font-size: 60px;
+  border: #fff;
+  text-align: center;
+  margin-bottom: 42px;
+}
+
+.texto-bienvenida p {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
