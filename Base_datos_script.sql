@@ -108,7 +108,9 @@ CREATE TABLE `consumicion` (
   `precio` int DEFAULT NULL,
   `categoria` varchar(45) DEFAULT NULL,
   `imagen` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idConsumicion`)
+  `iditem_consumicion` int DEFAULT NULL,
+  PRIMARY KEY (`idConsumicion`),
+  KEY `idconsumicion_idx` (`iditem_consumicion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -132,6 +134,7 @@ CREATE TABLE `empleado` (
   `idempleado` int NOT NULL,
   `nombre` varchar(45) DEFAULT NULL,
   `foto` varchar(45) DEFAULT NULL,
+  `mesa_idmesa` int DEFAULT NULL,
   PRIMARY KEY (`idempleado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
@@ -189,9 +192,11 @@ CREATE TABLE `item_consumicion` (
   `iditem_consumicion` int NOT NULL,
   `cantidad` int DEFAULT NULL,
   `detalle_idpedido` int DEFAULT NULL,
+  `idConsumicion` int DEFAULT NULL,
   PRIMARY KEY (`iditem_consumicion`),
   KEY `detalle_idpedido_idx` (`detalle_idpedido`),
-  CONSTRAINT `detalle_idpedido` FOREIGN KEY (`detalle_idpedido`) REFERENCES `pedidos` (`idpedidos`)
+  CONSTRAINT `detalle_idpedido` FOREIGN KEY (`detalle_idpedido`) REFERENCES `pedidos` (`idpedidos`),
+  CONSTRAINT `idconsumicion` FOREIGN KEY (`iditem_consumicion`) REFERENCES `consumicion` (`idConsumicion`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -250,7 +255,8 @@ CREATE TABLE `menu` (
   `categoria` varchar(45) DEFAULT NULL,
   `imagen` varchar(45) DEFAULT NULL,
   `comentario_plato` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idmenu`)
+  PRIMARY KEY (`idmenu`),
+  CONSTRAINT `comentario_plato` FOREIGN KEY (`idmenu`) REFERENCES `comentario` (`idcomentario`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -276,7 +282,12 @@ CREATE TABLE `mesa` (
   `libre` tinyint DEFAULT NULL,
   `max_personas` int DEFAULT NULL,
   `num_mesas` int DEFAULT NULL,
-  PRIMARY KEY (`idmesa`)
+  `idempleado` int DEFAULT NULL,
+  `idclientes` int DEFAULT NULL,
+  PRIMARY KEY (`idmesa`),
+  KEY `idclientes_idx` (`idclientes`),
+  CONSTRAINT `idclientes` FOREIGN KEY (`idmesa`) REFERENCES `clientes` (`idClientes`),
+  CONSTRAINT `idempleado` FOREIGN KEY (`idmesa`) REFERENCES `empleado` (`idempleado`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -304,7 +315,9 @@ CREATE TABLE `pedidos` (
   `categoria` varchar(45) DEFAULT NULL,
   `activo` tinyint DEFAULT NULL,
   `confirmado` tinyint DEFAULT NULL,
-  PRIMARY KEY (`idpedidos`)
+  `idcategoria` int DEFAULT NULL,
+  PRIMARY KEY (`idpedidos`),
+  CONSTRAINT `idcategoria` FOREIGN KEY (`idpedidos`) REFERENCES `categoria` (`idcategoria`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -355,7 +368,11 @@ CREATE TABLE `usuario` (
   `idusuario` int NOT NULL,
   `clave` varchar(45) DEFAULT NULL,
   `tipo` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`idusuario`)
+  `res_idreserva` int DEFAULT NULL,
+  `idreserva` varchar(45) DEFAULT NULL,
+  PRIMARY KEY (`idusuario`),
+  KEY `res_idreserva_idx` (`res_idreserva`),
+  CONSTRAINT `res_idreserva` FOREIGN KEY (`res_idreserva`) REFERENCES `reserva` (`idReserva`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -377,4 +394,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2022-10-17 14:33:16
+-- Dump completed on 2022-10-19 17:42:25
