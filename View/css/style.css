@@ -403,6 +403,17 @@ form .form-buttons .btn:active{
   background-color: var(--color1) !important;
 }
 
+.btn.custom-btn { /* boton de formulario contacto*//* boton de formulario contacto*/
+  padding: 12px 25px;
+  font-family: 'Nunito', sans-serif;
+  font-size: 16px;
+  font-weight: 600;
+  color: #ffffff;
+  background: #FF0000;
+  border: 2px solid #fbaf32;
+  border-radius: 5px;
+  transition: .5s;
+}
 
 
 /* MEDIA QUERIES */
