@@ -233,6 +233,10 @@ button a:visited {
 .order-container select {
   border: none;
 }
+.order-container h3 {
+  font-size: medium;
+  margin-bottom: 0;
+}
 
 /* PRODUCTOS */
 
@@ -432,7 +436,6 @@ form .form-buttons .btn:active{
     height: 60vh;
   }
 
-
 }
 /* TABLET */
 
@@ -441,6 +444,14 @@ form .form-buttons .btn:active{
     width: 12vw;
     height: 9vh;
   }
+  /* BARRA DE NAVEGACION */
+
+  .navbar-collapse{
+    z-index: 999;
+    background-color: var(--color1);
+    height: 100vh;
+    width: 30vw !important;
+  }
 
   /* PERFILES */
   .form-profile{
@@ -448,6 +459,11 @@ form .form-buttons .btn:active{
     height: 65vh;
   }
 
+  /* CARTA */
+
+  .cart-container{
+    display: none;
+  }
 
 }
 
@@ -476,4 +492,59 @@ form .form-buttons .btn:active{
     margin: 1vh !important;
   }
 
+
+  
+  /* CARTA */
+
+  .main-menu{
+    padding: 0;
+  }
+
+  .filter-container{
+    display: none;
+  }
+
+  .left-container{
+    width: 100%;
+    padding: 0;
+  }
+
+  .product-card {
+   height: auto;
+   padding: .5rem;
+    
+  }
+  
+  .accordion-body{
+      padding: 0 !important;
+  }
+  
+  .img-card {
+    height: 45vh;
+    width: 100%;
+  }
+
+  .card-title{
+    margin: 2vh 0 0 0;
+    text-align: center;
+  }
+
+  .card-text{
+    margin: 2vh 0 2vh 0 !important;
+    text-align: center;
+  }
+
+  .product-buttons{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  /* .separator{
+    text-align: center;
+    width: 50%;
+    height: 2px;
+    background-color: #828886;
+    margin: 1vh 0 1vh 0;
+    border-radius: 10%;
+  } */
 }
