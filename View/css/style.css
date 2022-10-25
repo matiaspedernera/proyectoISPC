@@ -51,6 +51,8 @@ button a:visited {
   display: flex;
   flex-direction: column;
   font-family: var(--font-family1);
+  margin:auto;
+  width:100vm;
 }
 
 .welcome-home {
@@ -448,7 +450,25 @@ form .form-buttons .btn:active{
     height: 65vh;
   }
 
+/* index */
+.welcome-home h1 {
+  font-size: 32px;
+ }
 
+ .welcome-home h3 {
+   font-size: 14px;
+   }
+   .local-button {
+    text-align:center;
+    text-transform: uppercase;
+    font-size: 10px;
+
+   }
+   .delivery-button {
+    text-align:center;
+    text-transform: uppercase;
+    font-size: 10px;
+   }
 }
 
 /* MOBILE */
@@ -476,4 +496,15 @@ form .form-buttons .btn:active{
     margin: 1vh !important;
   }
 
+  /*index */
+  body{font-size:0.8em;}
+  sidebar{display:none;}
+  div {
+    width: 100%;
+    height: 1000px;
+    color: black;
+  }
 }
+
+
+
