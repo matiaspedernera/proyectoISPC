@@ -183,13 +183,15 @@ button a:visited {
   display: flex;
   justify-content: space-around;
   padding: 2rem;
+  min-height: 88vh;
+  background-color: var(--color3);
   /* min-height: 150vh; */
 }
 
 .left-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 80%;
   padding: 0 2rem 0 1.5rem;
 }
 
@@ -371,6 +373,12 @@ button a:visited {
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
+.btn-carrito {
+  position: fixed;
+  height: 8vh;
+  bottom: 20px;
+  right: 20px;
+}
 
 /* PERFIL */
 
@@ -501,9 +509,32 @@ form .form-buttons .btn:active{
   }
 
   .filter-container{
-    display: none;
+    flex-direction: column-reverse;
+    /* display: none; */
   }
 
+  .search-container{
+    width: 100vw;
+  }
+
+  .search-container form{
+    width: 100%;
+    margin-top: 10vh;
+  }
+
+  .filter{
+    display: none;
+  }
+.order-container{
+  width: 100%;
+  justify-content: flex-end;
+}
+.order-container h3{
+  font-weight: bold;
+}
+.order-container select{
+  background-color: var(--color3);
+}
   .left-container{
     width: 100%;
     padding: 0;
