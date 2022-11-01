@@ -31,6 +31,11 @@ button a:visited {
 }
 /* BARRA DE NAVEGACION */
 
+header{
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
 .navbar {
   background-color: #0c0f0e;
   box-shadow: 2px 2px 10px #000000;
@@ -48,19 +53,16 @@ button a:visited {
   color: var(--color1) !important;
 }
 
+.navbar-collapse{
+  justify-content: flex-end;
+}
 /* HOME */
 .home-container {
   display: flex;
   flex-direction: column;
   font-family: var(--font-family1);
-<<<<<<< HEAD
- margin:auto;
- width: 100vw;
- 
-=======
   margin:auto;
-  width:100vm;
->>>>>>> 5e16d1896c43b3735209904412bf4b55b98e1753
+  width:100vw;
 }
 
 .welcome-home {
@@ -197,17 +199,22 @@ button a:visited {
   display: flex;
   justify-content: space-around;
   padding: 2rem;
-  /* min-height: 150vh; */
+  background-color: var(--color3);
 }
 
 .left-container {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  padding: 0 2rem 0 1.5rem;
+  width: 80%;
+  padding: 10vh 2rem 0 1.5rem;
+  /* margin-top: 10vh; */
 }
 
 /* FILTROS */
+
+.offcanvas-filters{
+  display: none;
+}
 
 .filter-container {
   display: flex;
@@ -247,6 +254,10 @@ button a:visited {
 .order-container select {
   border: none;
 }
+.order-container h3 {
+  font-size: medium;
+  margin-bottom: 0;
+}
 
 /* PRODUCTOS */
 
@@ -260,8 +271,7 @@ button a:visited {
     font-size: 1.5rem !important;
     font-weight: bold;
     display: flex;
-    /* width: 100%; */
-    /* justify-content: center; */
+  
 }
 
 .img-card {
@@ -381,17 +391,24 @@ button a:visited {
   transform: translateX(-50%) scaleY(1.3) scaleX(0.8);
 }
 
+.btn-carrito {
+  position: fixed;
+  height: 8vh;
+  bottom: 20px;
+  right: 20px;
+}
 
 /* PERFIL */
 
 .main-profile{
-  height: 88vh; 
+  height: 100vh; 
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background-color: var(--color4);
+  padding-top: 15vh;
 }
 
 .form-profile{
@@ -446,7 +463,6 @@ form .form-buttons .btn:active{
     height: 60vh;
   }
 
-
 }
 /* TABLET */
 
@@ -455,38 +471,52 @@ form .form-buttons .btn:active{
     width: 12vw;
     height: 9vh;
   }
+  /* BARRA DE NAVEGACION */
+ 
+  /* span.navbar-toggler-icon{
+    background-image: none;
+  } */
+  .container-fluid{
+    
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .navbar-collapse{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    z-index: 999;
+    background-color: var(--color1);
+    height: 40vh;
+  
+  }
+  .nav-item .nav-link {
+    color: var(--color4) !important;
+    font-size: 18px;
+  }
 
   /* PERFILES */
   .form-profile{
     width: 45%;
     height: 65vh;
   }
+
+  /* CARTA */
+
+  .cart-container{
+    display: none;
+  }
+  
+
 /* index */
 .welcome-home h1 {
   font-size: 32px;
  }
 
-<<<<<<< HEAD
- .welcome-home h3 {
-   font-size: 14px;
-   }
-   .local-button {
-    text-align:center;
-    text-transform: uppercase;
-    font-size: 10px;
-
-   }
-   .delivery-button {
-    text-align:center;
-    text-transform: uppercase;
-    font-size: 10px;
-   }
-=======
 /* index */
 .welcome-home h1 {
   font-size: 32px;
  }
->>>>>>> 5e16d1896c43b3735209904412bf4b55b98e1753
 
  .welcome-home h3 {
    font-size: 14px;
@@ -512,6 +542,7 @@ form .form-buttons .btn:active{
     height: 8vh;
   }
 
+
   /* PERFILES */
   .form-profile{
     width: 85%;
@@ -527,36 +558,123 @@ form .form-buttons .btn:active{
   form.form-buttons .btn{
     margin: 1vh !important;
   }
-<<<<<<< HEAD
-}
-/*index */
 
-@media screen and (min-width:300px) and (max-width:800px) {
-  body{font-size:0.8em;}
-  sidebar{display:none;}
-  div {
-    width: 100%;
-    height: 1000px;
-    color: black;
+
+  
+  /* CARTA */
+
+  .main-menu{
+    padding: 0;
   }
-  .welcome-home {
+
+  .filter-container{
+    flex-direction: column;
+  }
+
+  .offcanvas-filters{
+    display: block;
+    margin-top: 8vh;
+    text-align: center;
+  }
+
+
+  .search-container{
+    width: 100vw;
+    position:fixed;
+    margin-top: 28vh;
+    z-index: 998;
+    background-color: var(--color1);
+    height: 10vh;
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  .search-container form{
+    width: 100%;
+  }
+
+  .filter{
+    display: none;
+  }
+.order-container{
+  width: 100%;
+  justify-content: flex-end;
+  display: none;
+}
+.order-container h3{
+  font-weight: bold;
+}
+.order-container select{
+  background-color: var(--color3);
+}
+  .left-container{
+    width: 100%;
+    padding: 0;
+  }
+
+  .product-container{
+   margin-top: 4vh;
+
+  }
+  .product-card {
+   height: auto;
+   padding: .5rem;
     
-    margin: 50% auto;
-
   }
-}
-=======
-
-  /*index */
-  body{font-size:0.8em;}
-  sidebar{display:none;}
-  div {
+  
+  .accordion-body{
+      padding: 0 !important;
+      
+  }
+  
+  .img-card {
+    height: 45vh;
     width: 100%;
-    height: 1000px;
-    color: black;
+  }
+
+  .card-title{
+    margin: 2vh 0 0 0;
+    text-align: center;
+  }
+
+  .card-text{
+    margin: 2vh 0 2vh 0 !important;
+    text-align: center;
+  }
+
+  .product-buttons{
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  /* CARRITO */
+
+  tr .border-0{
+    font-size: 10px;
+    padding: 0 !important;
+  }
+
+  
+  tr .border-0 div{
+    /* width: 10%; */
+    text-align: center;
+    padding: 0 2vw 3vh 0 !important;
+  }
+
+  .title-cart{
+    font-size: 15px;
+    margin: 3vh 0 3vh 0;
+  }
+
+  td .borrar-carrito{
+    height: 6vh;
+    font-size: 13px;
+  }
+
+  tbody td{
+    text-align: center;
   }
 }
->>>>>>> 5e16d1896c43b3735209904412bf4b55b98e1753
 
 
 
