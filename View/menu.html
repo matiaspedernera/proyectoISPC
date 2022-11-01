@@ -52,9 +52,20 @@
           </form>
         </div>
         <div>
+          <div class="" id="">
+            <div class="dropdown">
+              <a class="btn btn-outline-dark dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Filtrar
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Filtrar</a></li>
+              </ul>
+            </div>
+          </div>
+          <!--
           <select name="" id="">
             <option value="">Filtrar</option>
-          </select>
+          </select>-->
         </div>
         <div class="order-container">
           <h3>Ordenar por:</h3>
@@ -64,6 +75,7 @@
           </select>
         </div>
       </div>
+
       <!-- PRODUCTOS -->
       <div class="product-container">
         <div class="accordion accordion-flush" id="accordionFlushExample">
@@ -84,7 +96,7 @@
                     </div>
                     <div class="col-md-7">
                       <div class="card-body">
-                        <h5 class="card-title">Mega Cuarto Deluxe</h5>
+                        <h5 class="card-title">Hamburguesa lechuga y tomate</h5>
                         <p class="card-text">
                           This is a wider card with supporting text below as a
                           natural lead-in to additional content. This content
@@ -113,7 +125,12 @@
                                 aria-label="Close"></button>
                             </div>
                             <div class="modal-body">
-                              ...
+                              <ul>
+                                <li>Tomate</li>
+                                <li>Carne</li>
+                                <li>Lechuga</li>
+                                <li>Queso</li>
+                              </ul>
                             </div>
                             <div class="modal-footer">
                             </div>
@@ -126,7 +143,7 @@
                 <div class="product-card mb-3">
                   <div class="row g-0">
                     <div class="col-md-3">
-                      <img src="./assets/img/1398768.png" class="img-card rounded-start" alt="burguer" />
+                      <img src="./assets/img/Mega-Cuarto-Deluxe.jpg" class="img-card rounded-start" alt="burguer" />
                     </div>
                     <div class="col-md-7">
                       <div class="card-body">
@@ -142,9 +159,38 @@
                       <button type="button" class="btn btn-success">
                         Agregar al carrito
                       </button>
-                      <button type="button" class="btn btn-danger">
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop1">
                         Ver Detalles
                       </button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="staticBackdrop1" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel1" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="staticBackdropLabel1">Recetas</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <ul>
+                                <li>Queso Cheddar</li>
+                                <li>Salsa Ketchup</li>
+                                <li>Lechuga</li>
+                                <li>Tomate</li>
+                                <li>Cebolla</li>
+                                <li>Carne</li>
+                                <li>Mayonesa</li>
+                              </ul>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -227,11 +273,11 @@
                 <div class="product-card mb-3">
                   <div class="row g-0">
                     <div class="col-md-3">
-                      <img src="./assets/img/1398768.png" class="img-card rounded-start" alt="burguer" />
+                      <img src="./assets/img/alma_mora.jpg" class="img-card rounded-start" alt="burguer" />
                     </div>
                     <div class="col-md-7">
                       <div class="card-body">
-                        <h5 class="card-title">Mega Cuarto Deluxe</h5>
+                        <h5 class="card-title">Vino Alma Mora</h5>
                         <p class="card-text">
                           This is a wider card with supporting text below as a
                           natural lead-in to additional content. This content
@@ -243,16 +289,41 @@
                       <button type="button" class="btn btn-success">
                         Agregar al carrito
                       </button>
-                      <button type="button" class="btn btn-danger">
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop4">
                         Ver Detalles
                       </button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="staticBackdrop4" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p>Vino de color rojo intenso, aroma a frutas maduras, frambuesas, ciruelas y un toque
+                                de vainilla.
+                                De boca carnosa, con largo final y buen equilibrio entre fruta y madera, sus taninos
+                                acarician
+                                la boca dejando una sensación amable y sabrosa.</p>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div class="product-card mb-3">
                   <div class="row g-0">
                     <div class="col-md-3">
-                      <img src="./assets/img/1398768.png" class="img-card rounded-start" alt="burguer" />
+                      <img src="./assets/img/sprite.png" class="img-card rounded-start" alt="sprite" />
                     </div>
                     <div class="col-md-7">
                       <div class="card-body">
@@ -268,9 +339,31 @@
                       <button type="button" class="btn btn-success">
                         Agregar al carrito
                       </button>
-                      <button type="button" class="btn btn-danger">
+                      <!-- Button trigger modal -->
+                      <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop5">
                         Ver Detalles
                       </button>
+
+                      <!-- Modal -->
+                      <div class="modal fade" id="staticBackdrop5" data-bs-backdrop="static" data-bs-keyboard="false"
+                        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="staticBackdropLabel">Detalles</h1>
+                              <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                              <p>Con su sabor cítrico fresco, satisfactorio y refrescante, Sprite es el refresco que
+                                enciende tus sentidos para mantenerte alerta.</p>
+                            </div>
+                            <div class="modal-footer">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
