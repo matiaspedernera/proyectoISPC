@@ -50,8 +50,23 @@ class ConexionBD:
                     print(self.cursor.rowcount, "Producto agregado exitosamente ")
                     self.cursor.close()
             except Error as e:
-               print("Error al insertar producto{}".format(e))
-    
+                print("Error al insertar producto {}".format(e))
+
+
+    #Eliminar producto con un objeto como parametro
+    def borrarProducto(self, codigo):
+            try:
+                if self.connection.is_connected():
+                    mySql_delete_query = "DELETE FROM `carta_digital`.`producto` WHERE `codigo` = %s"
+                    self.cursor=self.connection.cursor()
+                    data=(codigo, )
+                    self.cursor.execute(mySql_delete_query, data)
+                    self.connection.commit()
+                    record=self.cursor.fetchone()
+                    print(self.cursor.rowcount, "Producto eliminado exitosamente ")
+                    self.cursor.close()
+            except Error as e:
+                print("Error al borrar un producto {}".format(e))
 
 
                 

@@ -1,15 +1,14 @@
+import sys;
 
-import Models.conexion,Models.producto ;
-from Models.conexion import ConexionBD
-from Models.producto import Producto
+sys.path.append('.\\Models')
+from conexion import ConexionBD
+from producto import Producto
 
-
-
-
-prod = Producto("Pizza a la piedra","pizza de muzarella a la piedra",1800.50,10,1)
+prod = Producto("Hamburguesa","Big Mac",1800.50,1,1)
 
 bd=ConexionBD()
-bd.insertarProducto(prod)
+#bd.insertarProducto(prod)
+bd.borrarProducto(10)
 
 bd.cerrarConexion()
 
