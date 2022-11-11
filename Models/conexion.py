@@ -1,7 +1,11 @@
+<<<<<<< HEAD
 import mysql.connector
 import producto
+=======
+import mysql.connector;
+>>>>>>> 1bd1c87e83615fa4a5e9fb035c0eb267e2063c5c
 from mysql.connector import Error
-from producto import Producto
+
 
 
 class ConexionBD:
@@ -29,8 +33,29 @@ class ConexionBD:
 
     # metodo que cierra la conexion a la bd
     def cerrarConexion(self):
+<<<<<<< HEAD
         try:
             if self.connection.is_connected():
+=======
+            try:
+                if self.connection.is_connected():
+                    
+                    self.connection.close()
+                    print("Conexion MySQL cerrada.")
+            except Error as e:
+                print ("Error al cerrar la conexion",e)
+    
+   
+ 
+    
+       
+           
+           
+           
+            
+            
+
+>>>>>>> 1bd1c87e83615fa4a5e9fb035c0eb267e2063c5c
 
                 self.connection.close()
                 print("Conexion MySQL cerrada.")
