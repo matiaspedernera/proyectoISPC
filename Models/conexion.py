@@ -1,6 +1,6 @@
-import mysql.connector,producto;
+import mysql.connector;
 from mysql.connector import Error
-from producto import Producto
+
 
 class ConexionBD:
 
@@ -37,21 +37,14 @@ class ConexionBD:
     
    
  
-    #insertar producto con un objeto como parametro
-    def insertarProducto(self,prod):
-            try:
-                if self.connection.is_connected():
-                    mySql_insert_query = """INSERT INTO `carta_digital`.`producto` (`nombre`, `descripcion`, `precio`, `stock`, `categoria_cod`) VALUES (%s,%s,%s,%s,%s) """
-                    data=(prod.nombre,prod.descripcion,prod.precio,prod.stock,prod.categoria)
-                    self.cursor=self.connection.cursor()
-                    self.cursor.execute(mySql_insert_query,data)
-                    self.connection.commit()
-                    record=self.cursor.fetchone()
-                    print(self.cursor.rowcount, "Producto agregado exitosamente ")
-                    self.cursor.close()
-            except Error as e:
-               print("Error al insertar producto{}".format(e))
     
+       
+           
+           
+           
+            
+            
+
 
 
                 
