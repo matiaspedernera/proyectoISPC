@@ -33,6 +33,10 @@ form .form-buttons .btn:active{
   background-color: var(--color1) !important;
 }
 
+.footer {
+  margin: 0;
+}
+
 /* MEDIA QUERIES */
 
 /* TABLET */
