@@ -5,6 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NosotrosComponent } from './nosotros/nosotros.component';
 import { FooterComponent } from './footer/footer.component';
+import { ContactanosComponent } from './contactanos/contactanos.component';
 import { PerfilComponent } from './perfil/perfil.component';
 
 @NgModule({
@@ -12,6 +13,7 @@ import { PerfilComponent } from './perfil/perfil.component';
     AppComponent,
     NosotrosComponent,
     FooterComponent,
+    ContactanosComponent,
     PerfilComponent
   ],
   imports: [
