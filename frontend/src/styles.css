@@ -406,17 +406,16 @@ a{
     right: 20px;
   }
   
-  footer {
+/*   footer {
     background-color: var(--color3);
     margin: -2rem;
-    margin-top: 100px;
   }
   footer ul {
     padding: 0;
   }
   footer li {
     list-style: none;
-  }
+  } */
   .wrap-footer {
     display: grid;
     grid-template-columns: 75% 15% 15% 20%;
