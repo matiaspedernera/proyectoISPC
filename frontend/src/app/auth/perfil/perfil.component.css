@@ -5,7 +5,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #fdeedc;
+  background-color: var(--color4);
   padding-top: 15vh;
 }
 
@@ -17,7 +17,7 @@
   height: 60vh;
   width: 35%;
   margin-top: 3vh;
-  background-color: #ffd8a9;
+  background-color: var(--color3);
   box-shadow: 4px 4px 4px #666;
 }
 
