@@ -15,7 +15,9 @@ a{
     --color3: #ffd8a9;
     --color4: #fdeedc;
     --color5: #0c0f0e;
-  
+    --color7: #a1a0a4;
+    --color7: #f1b272;
+    --color8:#deac66;
     --bg-opacity: rgba(255, 255, 0, 0.341);
   }
   
@@ -360,7 +362,7 @@ a{
     top: 100%;
     width: 140%;
     height: 180%;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(56, 18, 18, 0.05);
     border-radius: 50%;
     display: block;
     transition: all 0.5s 0.1s cubic-bezier(0.55, 0, 0.1, 1);

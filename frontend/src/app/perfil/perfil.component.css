@@ -18,13 +18,13 @@
     height: 60vh;
     width: 35%;
     margin-top: 3vh;
-    background-color: #ffd8a9;
+    background-color: #f1a661;
     box-shadow: 4px 4px 4px #666; 
   }
   .input-form{
     border: 0 !important;
-    border-bottom: 2px solid #000000 !important;
-    background-color:#ffd8a9 !important;
+    border-bottom: 2px solid #f8f4f4 !important;
+    background-color:#fffffe !important;
     margin: 1vh 0 1vh 0;
   
   }
