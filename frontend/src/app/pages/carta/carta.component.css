@@ -1,9 +1,30 @@
+.accordion {
+  border-radius: 25px; /* Redondea los bordes del acordeón */
+  overflow: hidden; /* Oculta cualquier contenido adicional que pueda desbordar */
+  width: 100%;
+}
+
+
+.accordion-item {
+  border-radius: 25px; /* Redondea los bordes de cada elemento */
+  border: 1px solid #ccc; /* Añade un borde para resaltar los elementos */
+  margin-bottom: 10px; /* Espacio entre elementos */
+}
+.accordion-header {
+  padding: 10px;
+  background-color: #f0f0f0; /* Color de fondo para el encabezado */
+  cursor: pointer;
+}
+
+
+
+
 /* MAIN */
 .main-menu {
   display: flex;
   justify-content: space-around;
   padding: 2rem;
-  background-color: var(--color3);
+  background-color: var(--color4);
 }
 
 .left-container {
@@ -71,15 +92,19 @@
 
 .accordion-button {
   background-color: var(--color2) !important;
-  height: 12vh;
+  height: 10vh;
+  min-width: 0%;
   font-size: 1.5rem !important;
   font-weight: bold;
   display: flex;
+ 
+
 }
 
 .img-card {
   height: 90%;
   width: 90%;
+ 
 }
 
 /* CARRITO */
@@ -87,7 +112,6 @@
   height: 80vh;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   align-items: center;
   background-color: var(--color2);
   padding: 1rem;
@@ -95,6 +119,7 @@
   border-radius: 20px 20px;
   box-shadow: 1px 1px 0px var(--color1), 2px 2px 0px var(--color1), 3px 3px 0px var(--color2), 4px 4px 0px var(--color2),
     5px 5px 0px var(--color3);
+   
 }
 .cart-products {
   height: 100%;
@@ -107,12 +132,13 @@
   margin: 1vh 0 1vh 0;
   display: flex;
   justify-content: space-between;
-  /* align-items: center; */
+  /*align-content: center;*/
 }
 
 .cart-img {
   width: 25%;
   border-radius: 10px 10px 10px 10px;
+  
 }
 
 .cart-trash {
