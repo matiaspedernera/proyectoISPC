@@ -74,18 +74,16 @@
           <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
             data-bs-parent="#accordionFlushExample">
             <div class="accordion-body">
-              <div class="product-card mb-3">
+              <div *ngFor="let product of products" class="product-card mb-3">
                 <div class="row g-0">
                   <div class="col-md-3">
-                    <img src="./assets/img/1398768.png" class="img-card rounded-start" alt="burguer" />
+                    <img [src]="product.srcImage" class="img-card rounded-start" alt="burguer" />
                   </div>
                   <div class="col-md-7">
                     <div class="card-body">
-                      <h5 class="card-title">Mega Cuarto Deluxe</h5>
+                      <h5 class="card-title">{{product.name}}</h5>
                       <p class="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content
-                        is a little bit longer.
+                        {{product.description}}
                       </p>
                     </div>
                   </div>
@@ -100,31 +98,7 @@
                 </div>
               </div>
               <!-- <div class="separator"></div> -->
-              <div class="product-card mb-3">
-                <div class="row g-0">
-                  <div class="col-md-3">
-                    <img src="./assets/img/1398768.png" class="img-card rounded-start" alt="burguer" />
-                  </div>
-                  <div class="col-md-7">
-                    <div class="card-body">
-                      <h5 class="card-title">Mega Cuarto Deluxe</h5>
-                      <p class="card-text">
-                        This is a wider card with supporting text below as a
-                        natural lead-in to additional content. This content
-                        is a little bit longer.
-                      </p>
-                    </div>
-                  </div>
-                  <div class="product-buttons col-md-2">
-                    <button type="submit" class="btn btn-primary btn-block">
-                      Agregar al Carrito</button> 
-                      
-                    
-                      <button type="submit" class="btn btn-danger btn-block">
-                        Mostrar Detalles</button> 
-                  </div>
-                </div>
-              </div>
+              
             </div>
           </div>
         </div>
