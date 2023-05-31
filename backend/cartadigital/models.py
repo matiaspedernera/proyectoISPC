@@ -24,6 +24,7 @@ class Usuario(models.Model):
     email = models.EmailField(max_length=60, blank=False)
     password = models.CharField(max_length=20, blank=False)
     tipo_Usuario = models.CharField(max_length=20) #(puede tomar valores como: 'administrador' o 'usuario')
+    activo = models.BooleanField(default=True)
     def __unicode__(self):
         return self.nombre
     def __str__(self):
@@ -41,6 +42,7 @@ class Producto(models.Model):
     precio = models.DecimalField(max_length=10, blank=False, decimal_places=2, max_digits=10)
     stock = models.IntegerField(default=0)
     imagen = models.CharField(max_length=60)
+    activo = models.BooleanField(default=True)
     # categoria_id (ForeignKey lo genera por defecto para la relacion que se arma)
     categoria = models.ForeignKey(
         Categoria, 
@@ -64,7 +66,7 @@ class Producto(models.Model):
 class Pedido(models.Model): 
     #id(primary_key lo genera por defecto el ORM de django)
     fecha_Hora = models.DateTimeField(blank=False)
-    estado = models.CharField(max_length=100, blank=False)#(puede tomar valores como: 'solicitado','confirmado','atendido')
+    estado = models.CharField(max_length=100, blank=False)#(puede tomar valores como: 'solicitado','confirmado','atendido','cancelado')
     tipo = models.CharField(max_length=100, blank=False) #(puede tomar valores como: 'salon','delivery','retiro')
     observacion = models.CharField (max_length=100)
     numeroMesa = models.IntegerField
