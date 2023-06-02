@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class GetProductsService {
-  url:String= "http://127.0.0.1:8000/api/";
+  url:String= "http://127.0.0.1:8000/";
   constructor(private http:HttpClient) { }
 
 
   getProducts(): Observable <any> {
-    return this.http.get(this.url+"lista")
+    return this.http.get(this.url+"producto?format=json")
   }
 }
