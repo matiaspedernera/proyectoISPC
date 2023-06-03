@@ -13,6 +13,7 @@ export class CartaComponent implements OnInit{
     this.product.getProducts().subscribe({
       next: (productsData) => {
         this.products=productsData
+        console.log(productsData)
       },
       error: (errorData) => {
         console.error(errorData);
