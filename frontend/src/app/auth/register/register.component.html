@@ -1,0 +1,59 @@
+<main class="main-profile">
+  <h2>Registrarme</h2>
+  <form [formGroup]="registerForm" class="form-profile">
+    <div class="form-buttons d-flex justify-content-center">
+      <button type="button" class="btn btn-warning m-2" [routerLink]="['/login']"
+        routerLinkActive="router-link-active">Iniciar Sesión</button>
+      <button type="button" class="btn btn-warning m-2 active">Registrarme</button>
+    </div>
+
+    <div class="col-12">
+      <input formControlName="nombreApellido" type="text" class="form-control" id="inputAddress" placeholder="Nombre y Apellido" required>
+      <div *ngIf="nombreApellido.invalid && (nombreApellido.dirty || nombreApellido.touched)" class="text-danger">
+
+        <div *ngIf="nombreApellido.errors?.['required']">
+          Name and surname is required.
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-12">
+      <input formControlName="identificacion" type="text" class="form-control" id="inputAddress2" placeholder="Identificación" required>
+      <div *ngIf="identificacion.invalid && (identificacion.dirty || identificacion.touched)" class="text-danger">
+
+        <div *ngIf="identificacion.errors?.['required']">
+          Identification is required.
+        </div>
+        
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <input formControlName="email" type="email" class="form-control" id="inputEmail4" placeholder="Email" required>
+      <div *ngIf="email.invalid && (email.dirty || email.touched)" class="text-danger">
+
+        <div *ngIf="email.errors?.['required']">
+          Email is required.
+        </div>
+        <div *ngIf="email.errors?.['email']">
+          Email format is invalid.
+        </div>
+
+      </div>
+    </div>
+
+    <div class="col-md-12">
+      <input formControlName="password" type="password" class="form-control" id="inputPassword4" placeholder="Contraseña" required>
+      <div *ngIf="password.invalid && (password.dirty || password.touched)" class="text-danger">
+
+        <div *ngIf="password.errors?.['required']">
+          Password is required.
+        </div>
+        
+      </div>
+    </div>
+
+    <button (click)="register()" type="submit" class="btn btn-warning mt-4">Registrarme</button>
+  </form>
+</main>
