@@ -4,6 +4,8 @@ from . import views
 urlpatterns = [
   
   	  path('',views.inicioApi,name='inicioApi' ),
-      path('lista',views.listaUsuarios,name='listaUsuarios' ),
+      path('usuarios/listado',views.listaUsuarios,name='listaUsuarios' ),
+      path('productos/listado',views.listadoProductos,name='listaProductos' ),
+      
         
 	]

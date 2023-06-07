@@ -2,17 +2,21 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { NosotrosComponent } from './pages/nosotros/nosotros.component';
 import { ContactanosComponent } from './pages/contactanos/contactanos.component';
-import { PerfilComponent } from './auth/perfil/perfil.component';
 import { CartaComponent } from './pages/carta/carta.component';
 import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './auth/login/login.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { ProductosComponent } from './pages/productos/productos.component';
 
 const routes: Routes = [
   {path: '', redirectTo:'/home', pathMatch:'full'},
   {path: 'home', component:HomeComponent},
   {path: 'nosotros', component:NosotrosComponent},
   {path: 'contactanos', component:ContactanosComponent},
-  {path: 'perfil', component:PerfilComponent},
-  {path: 'carta', component:CartaComponent}
+  {path: 'carta', component:CartaComponent},
+  {path: 'login', component:LoginComponent},
+  {path: 'register', component:RegisterComponent},
+  {path: 'productos', component:ProductosComponent}
 ];
 
 @NgModule({

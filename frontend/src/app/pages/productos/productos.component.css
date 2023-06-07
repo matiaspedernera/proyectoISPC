@@ -1,0 +1,11 @@
+.productsSection {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 15vh;
+  align-items: center;
+}
+
+.productosButton {
+  width: fit-content;
+}
