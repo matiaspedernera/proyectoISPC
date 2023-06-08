@@ -9,12 +9,17 @@ class UserSerializer(serializers.ModelSerializer):
         required=True)
     username = serializers.CharField(
         required=True)
+    first_name = serializers.CharField(
+        required=True)
+    last_name = serializers.CharField(
+        required =True)
     password = serializers.CharField(
-        min_length=8)
+        min_length=8, write_only=True)
     
-    def validate_password(self, value):
-        return make_password(value)
+    def create(self, validated_data):
+        validated_data['password'] = make_password(validated_data['password'])
+        return super().create(validated_data)
 
     class Meta:
         model = get_user_model()
-        fields = ('email', 'username', 'password')
+        fields = ('email', 'username', 'first_name', 'last_name', 'password')
