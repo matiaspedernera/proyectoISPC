@@ -15,6 +15,7 @@ class UserSerializer(serializers.ModelSerializer):
         required =True)
     password = serializers.CharField(
         min_length=8, write_only=True)
+    is_staff = serializers.BooleanField()
     
     def create(self, validated_data):
         validated_data['password'] = make_password(validated_data['password'])
@@ -22,4 +23,4 @@ class UserSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = get_user_model()
-        fields = ('email', 'username', 'first_name', 'last_name', 'password')
+        fields = ('email', 'username', 'first_name', 'last_name', 'password', 'is_staff')
