@@ -9,6 +9,8 @@ urlpatterns = [
     url(r'^categoria/(?P<pk>[0-9]+)$', views.CategoriaDetail.as_view()),
     url(r'^producto$', views.ProductoList.as_view()),
     url(r'^producto/(?P<pk>[0-9]+)$', views.ProductoDetail.as_view()),
+    url(r'^user$', views.UserList.as_view()),
+    url(r'^user/(?P<pk>[0-9]+)$', views.UserDetail.as_view()),
 	]
 
 
