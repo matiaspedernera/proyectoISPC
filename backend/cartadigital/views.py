@@ -2,7 +2,8 @@ from django.shortcuts import render
 from django.http import HttpResponse 
 from rest_framework import generics
 from cartadigital.models import Categoria, Producto
-from cartadigital.serializers import CategoriaSerializer, ProductoSerializer
+from cartadigital.serializers import CategoriaSerializer, ProductoSerializer, UserSerializer
+from authentication.models import CustomUser
 
 # Create your views here.
 #def inicio(request):
@@ -24,3 +25,11 @@ class ProductoList(generics.ListCreateAPIView):
 class ProductoDetail(generics.RetrieveUpdateDestroyAPIView):
     queryset = Producto.objects.all()
     serializer_class = ProductoSerializer
+
+class UserList(generics.ListCreateAPIView):
+    queryset = CustomUser.objects.all()
+    serializer_class = UserSerializer
+
+class UserDetail(generics.RetrieveUpdateDestroyAPIView):
+    queryset = CustomUser.objects.all()
+    serializer_class = UserSerializer

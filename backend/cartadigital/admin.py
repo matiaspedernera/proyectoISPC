@@ -7,11 +7,6 @@ class CategoriaAdmin(admin.ModelAdmin):
     search_fields = ['nombre', 'descripcion']
     list_filter = ['nombre']
 
-class UsuarioAdmin(admin.ModelAdmin):
-    list_display = ['id','nombre','apellido','email']
-    search_fields = ['nombre','apellido',]
-    list_filter = ['tipo_Usuario']
-
 class PedidoAdmin(admin.ModelAdmin):
     list_display = ['id','fecha_Hora','estado','tipo','numeroMesa','usuario']
     search_fields = ['id','numeroMesa','usuario']
@@ -57,7 +52,6 @@ class ReservaAdmin(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(Categoria,CategoriaAdmin)
-admin.site.register(Usuario,UsuarioAdmin)
 admin.site.register(Pedido, PedidoAdmin)
 admin.site.register(Producto, ProductoAdmin)
 admin.site.register(Carta, CartaAdmin)
