@@ -16,5 +16,5 @@ class ProductoSerializer(serializers.ModelSerializer):
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = CustomUser
-        fields = ('email', 'username', 'first_name',
+        fields = ('id','email', 'username', 'first_name',
                   'last_name', 'password', 'is_staff')

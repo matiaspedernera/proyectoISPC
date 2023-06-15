@@ -1,6 +1,7 @@
 from collections.abc import Iterable
 from typing import Any
 from django.db import models
+from authentication.models import CustomUser
 
 # CLASE CATEGORIA
 class Categoria(models.Model):
@@ -72,7 +73,7 @@ class Pedido(models.Model):
     numeroMesa = models.IntegerField
     #usuario_id = (ForeignKey lo genera por defecto para la relacion que se arma)
     usuario = models.ForeignKey(
-        Usuario,
+        CustomUser,
         related_name= "pedido_usuario",
         on_delete=models.CASCADE
     )
@@ -186,7 +187,7 @@ class Comentario(models.Model):
     asunto = models.CharField (max_length=20, blank=False)
     #usuario_id = (ForeignKey lo genera por defecto para la relacion que se arma)
     usuario = models.ForeignKey(
-        Usuario,
+        CustomUser,
         related_name= "comentario_usuario",
         on_delete=models.CASCADE
     )
@@ -223,7 +224,7 @@ class Reserva(models.Model):
     detalle = models.CharField (max_length=45, blank=False)
     #usuario_id = (ForeignKey lo genera por defecto para la relacion que se arma)
     usuario = models.ForeignKey(
-        Usuario,
+        CustomUser,
         related_name= "reserva_usuario",
         on_delete=models.CASCADE
     )
