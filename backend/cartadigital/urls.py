@@ -11,6 +11,8 @@ urlpatterns = [
     url(r'^producto/(?P<pk>[0-9]+)$', views.ProductoDetail.as_view()),
     url(r'^user$', views.UserList.as_view()),
     url(r'^user/(?P<pk>[0-9]+)$', views.UserDetail.as_view()),
+    url(r'^pedido$', views.PedidoList.as_view()),
+    url(r'^pedido/(?P<pk>[0-9]+)$', views.PedidoDetail.as_view()),
 	]
 
 
