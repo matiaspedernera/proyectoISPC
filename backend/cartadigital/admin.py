@@ -8,7 +8,7 @@ class CategoriaAdmin(admin.ModelAdmin):
     list_filter = ['nombre']
 
 class PedidoAdmin(admin.ModelAdmin):
-    list_display = ['id','fecha_Hora','estado','tipo','numeroMesa','usuario']
+    list_display = ['id','fecha_Hora','estado','tipo','numeroMesa','usuario','importe','pago']
     search_fields = ['id','numeroMesa','usuario']
     list_filter = ['estado','tipo','usuario']
 
@@ -27,10 +27,10 @@ class CalificacionAdmin(admin.ModelAdmin):
     search_fields = ['calificacion','producto','comentario']
     list_filter = ['producto']
 
-class FacturaAdmin(admin.ModelAdmin):
-    list_display = ['id','fecha','importe']
-    search_fields = ['id','fecha']
-    list_filter =  ['fecha']
+#class FacturaAdmin(admin.ModelAdmin):
+#    list_display = ['id','fecha','importe']
+#    search_fields = ['id','fecha']
+#    list_filter =  ['fecha']
 
 class VentaAdmin(admin.ModelAdmin):
     list_display = ['id','fecha_hora','descuento','importe','pedido']
@@ -43,7 +43,7 @@ class ComentarioAdmin(admin.ModelAdmin):
     list_filter = ['asunto','usuario']
 
 class MesaAdmin(admin.ModelAdmin):
-    list_display = ['id','estado','ubicacion','cant_personas']
+    list_display = ['id','numero','estado','ubicacion','cant_personas']
 
 class ReservaAdmin(admin.ModelAdmin):
     list_display = ['id','fecha_hora','estado','usuario','mesa']
@@ -56,7 +56,7 @@ admin.site.register(Pedido, PedidoAdmin)
 admin.site.register(Producto, ProductoAdmin)
 admin.site.register(Carta, CartaAdmin)
 admin.site.register(Calificacion, CalificacionAdmin)
-admin.site.register(Factura, FacturaAdmin)
+#admin.site.register(Factura, FacturaAdmin)
 admin.site.register(Venta, VentaAdmin)
 admin.site.register(Comentario, ComentarioAdmin)
 admin.site.register(Mesa, MesaAdmin)

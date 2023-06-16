@@ -2,6 +2,7 @@ from collections.abc import Iterable
 from typing import Any
 from django.db import models
 from authentication.models import CustomUser
+from datetime import datetime
 
 # CLASE CATEGORIA
 class Categoria(models.Model):
@@ -66,11 +67,13 @@ class Producto(models.Model):
 # CLASE PEDIDO
 class Pedido(models.Model): 
     #id(primary_key lo genera por defecto el ORM de django)
-    fecha_Hora = models.DateTimeField(blank=False)
+    fecha_Hora = models.DateTimeField(default=datetime.now())
     estado = models.CharField(max_length=100, blank=False)#(puede tomar valores como: 'solicitado','confirmado','atendido','cancelado')
     tipo = models.CharField(max_length=100, blank=False) #(puede tomar valores como: 'salon','delivery','retiro')
     observacion = models.CharField (max_length=100)
-    numeroMesa = models.IntegerField
+    numeroMesa = models.IntegerField(default=0)
+    importe = models.FloatField(default=0.0)
+    pago= models.CharField(max_length= 15, default='pendiente') #puede tomar valores como: 'pendiente' ó 'realizado'
     #usuario_id = (ForeignKey lo genera por defecto para la relacion que se arma)
     usuario = models.ForeignKey(
         CustomUser,
@@ -85,7 +88,7 @@ class Pedido(models.Model):
     def __unicode__(self):
         return self.fecha_Hora
     def __str__(self):
-        return self.estado
+        return str(self.pk)
     class Meta:
         db_table = 'pedido'
         verbose_name = 'Pedido'
@@ -129,34 +132,37 @@ class Calificacion(models.Model):
     def __unicode__(self):
         return self.calificacion
     def __str__(self):
-        return self.calificacion
+       return str(self.pk)
     class Meta:
         db_table = 'calificacion'
         verbose_name = 'Calificacion'
         verbose_name_plural = 'Calificaciones'
 
 # CLASE FACTURA
-class Factura(models.Model):
+#class Factura(models.Model):
    #id(primary_key lo genera por defecto el ORM de django)
-    fecha = models.DateField(blank=False)
-    cantidad = models.IntegerField(blank=False)
-    descripcion = models.TextField (max_length=1000, blank=False)
-    importe = models.IntegerField(blank=False)
-    def __unicode__(self):
-        return self.cantidad
-    def __str__(self):
-        return self.cantidad
-    class Meta:
-        db_table = 'factura'
-        verbose_name = 'Factura'
-        verbose_name_plural = 'Facturas'
+    #fecha = models.DateField(blank=False)
+    #cantidad = models.IntegerField(blank=False)
+    #descripcion = models.TextField (max_length=1000, blank=False)
+    #importe = models.IntegerField(blank=False)
+    #def __unicode__(self):
+        #return self.cantidad
+    #def __str__(self):
+        #return self.cantidad
+    #class Meta:
+        #db_table = 'factura'
+        #verbose_name = 'Factura'
+        #verbose_name_plural = 'Facturas'
 
 # CLASE VENTA
 class Venta(models.Model):
    #id(primary_key lo genera por defecto el ORM de django)
-    descuento = models.IntegerField
-    fecha_hora = models.DateTimeField
-    importe = models.IntegerField
+    descuento = models.FloatField(default=0.0)
+    fecha_hora = models.DateTimeField(default=datetime.now())
+    importe = models.FloatField(default=0.0)
+    formaPago = models.CharField(default='efectivo',max_length=30) #efectivo, tarjeta c/d, transferencia, mercado pago
+    estado = models.CharField(default='pendiente', max_length=25) # pendiente,aceptada, rechazada
+    numComprobante = models.IntegerField(default=0)
     #pedido_id =  (ForeignKey lo genera por defecto para la relacion que se arma)
     pedido = models.ForeignKey(
         Pedido,
@@ -164,16 +170,11 @@ class Venta(models.Model):
         related_name= "venta_pedido",
         on_delete=models.CASCADE
     )
-    #factura_id =  (ForeignKey lo genera por defecto para la relacion que se arma)
-    factura = models.ForeignKey(
-        Factura,
-        related_name= "venta_factura",
-        on_delete=models.CASCADE
-    )
+    
     def __unicode__(self):
         return self.descuento
     def __str__(self):
-        return self.descuento
+       return str(self.pk)
     class Meta:
         db_table = 'venta'
         verbose_name = 'Venta'
@@ -194,7 +195,7 @@ class Comentario(models.Model):
     def __unicode__(self):
         return self.id_Comentario
     def __str__(self):
-        return self.id_Comentario
+        return str(self.pk)
     class Meta:
         db_table = 'comentario'
         verbose_name = 'Comentario'
@@ -203,14 +204,14 @@ class Comentario(models.Model):
 # CLASE MESA
 class Mesa(models.Model):
     #id(primary_key lo genera por defecto el ORM de django)
-    numero = models.ImageField
+    numero = models.IntegerField(default=0)
     estado = models.CharField(max_length=100, blank=False) #(puede tomar los valores : 'libre','ocupada','reservada')
     ubicacion = models.TextField(max_length=1000, blank=False) #(puede tomar los valores: 'interior','exterior','patio')
     cant_personas = models.IntegerField(blank=False)
     def __unicode__(self):
         return self.estado
     def __str__(self):
-        return self.numero
+         return "%s" %(self.numero)
     class Meta:
         db_table = 'mesa'
         verbose_name = 'Mesa'
@@ -219,7 +220,7 @@ class Mesa(models.Model):
 #CLASE RESERVA
 class Reserva(models.Model):
     #id(primary_key lo genera por defecto el ORM de django)
-    fecha_hora = models.DateTimeField(blank=False)
+    fecha_hora = models.DateTimeField(default=datetime.now())
     estado = models.CharField(max_length=100, blank=False) #(puede tomar los valores: 'solicitada','confirmada','cancelada')
     detalle = models.CharField (max_length=45, blank=False)
     #usuario_id = (ForeignKey lo genera por defecto para la relacion que se arma)
@@ -237,7 +238,7 @@ class Reserva(models.Model):
     def __unicode__(self):
         return self.fecha_hora
     def __str__(self):
-        return self.fecha_hora
+        return str(self.pk)
     class Meta:
         db_table = 'reserva'
         verbose_name = 'Reserva'
