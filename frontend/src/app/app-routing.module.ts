@@ -5,7 +5,7 @@ import { ContactanosComponent } from './pages/contactanos/contactanos.component'
 import { CartaComponent } from './pages/carta/carta.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
+import { SignupComponent } from './auth/signup/signup.component';
 import { ProductosComponent } from './pages/productos/productos.component';
 
 const routes: Routes = [
@@ -15,7 +15,7 @@ const routes: Routes = [
   {path: 'contactanos', component:ContactanosComponent},
   {path: 'carta', component:CartaComponent},
   {path: 'login', component:LoginComponent},
-  {path: 'register', component:RegisterComponent},
+  {path: 'signup', component:SignupComponent},
   {path: 'productos', component:ProductosComponent}
 ];
 
