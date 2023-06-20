@@ -77,6 +77,14 @@ export class GetProductsService {
       this.saveProducts();
     }
   }
+<<<<<<< HEAD
 >>>>>>> f22d2dd3ec8d0aa82fb2c3e8ed994a56104b1444
+=======
+
+  clearProducts() {
+    this.products = [];
+    localStorage.clear();
+  }
+>>>>>>> e5bc4c1211f0b5c6516e687c77371ff0fa8256bb
 }
   

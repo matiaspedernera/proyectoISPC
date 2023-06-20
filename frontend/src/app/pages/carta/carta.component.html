@@ -524,17 +524,17 @@
                 <tr>
                   <td colspan="3"></td>
                   <td class="table-active fw-bold text-uppercase">Total</td>
-                  <td id="total-field">${{total | currency}}</td>
+                  <td id="total-field">{{total | currency}}</td>
                 </tr>
               </tfoot>
             </table>
           </div>
         </div>
         <div class="modal-footer">
-          <button id="borrar-todo" type="button" class="btn btn-danger" data-bs-dismiss="modal" id="borrar-todo">
+          <button (click)="clearCart()" id="borrar-todo" type="button" class="btn btn-danger" data-bs-dismiss="modal" id="borrar-todo">
             Borrar Todo
           </button>
-          <button type="button" class="btn btn-success" data-bs-toggle="modal" data-bs-target="#pago" id="btn-pago">
+          <button (click)="checkout()" type="button" class="btn btn-success" data-bs-dismiss="modal" id="btn-pago">
             Pagar
           </button>
         </div>

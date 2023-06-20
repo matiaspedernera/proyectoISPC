@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { GetProductsService } from 'src/app/services/get-products.service';
 
 @Component({
@@ -11,7 +12,7 @@ export class CartaComponent implements OnInit {
   productsOnCart: any[] = [];
   subtotal: any;
 
-  constructor(private products_service: GetProductsService) {
+  constructor(private products_service: GetProductsService, private router: Router) {
     this.products_service.getProducts().subscribe({
       next: (productsData) => {
         this.products = productsData
@@ -66,5 +67,15 @@ export class CartaComponent implements OnInit {
       { cantidad: 1, precio: 0 }
     ).precio
 >>>>>>> f22d2dd3ec8d0aa82fb2c3e8ed994a56104b1444
+  }
+
+  checkout() {
+    localStorage.setItem('total_carrito', JSON.stringify(this.total));
+    this.router.navigate(['/pago']);
+  }
+
+  clearCart() {
+    this.products_service.clearProducts();
+    this.productsOnCart = this.products_service.getProduct();
   }
 }
