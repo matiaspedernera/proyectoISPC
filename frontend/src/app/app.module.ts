@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -33,7 +33,11 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     ReactiveFormsModule,
+<<<<<<< HEAD
     FormsModule
+=======
+    FormsModule,
+>>>>>>> f22d2dd3ec8d0aa82fb2c3e8ed994a56104b1444
   ],
   providers: [],
   bootstrap: [AppComponent]
