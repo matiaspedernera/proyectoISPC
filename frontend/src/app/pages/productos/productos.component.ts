@@ -7,7 +7,13 @@ import { GetProductsService } from 'src/app/services/get-products.service';
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.css']
 })
+
+
+
 export class ProductosComponent {
+  
+  selectedProduct: any;
+  products: any[] = [];
   productForm = this.formBuilder.group({
     nombre: ['', Validators.required],
     descripcion: ['', Validators.required],
@@ -22,6 +28,35 @@ export class ProductosComponent {
     private formBuilder: FormBuilder,
     private productService : GetProductsService,
   ) {}
+
+
+  
+  ngOnInit() {
+    this.loadProducts();
+  }
+
+  loadProducts() {
+    this.productService.getProducts().subscribe(
+      (data: any[]) => {
+        this.products = data;
+      },
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
+  editProduct(product: any): void {
+    this.productService = product;
+    this.productForm.patchValue({
+      nombre: product.nombre,
+      descripcion: product.descripcion,
+      precio: product.precio,
+      stock: product.stock,
+      imagen: product.imagen,
+      activo: product.activo,
+      categoria: product.categoria
+    });
+  }
 
   get nombre() {
     return this.productForm.controls.nombre;
@@ -60,5 +95,29 @@ export class ProductosComponent {
       alert('No se permiten campos vacios.');
     }
   }
+  deleteProduct(product: any) {
+    const productId = product.id; // Asegúrate de usar el nombre correcto de la propiedad que contiene el ID del producto
+  
+    this.productService.deleteProduct(productId).subscribe(
+      () => {
+        console.log("Producto eliminado");
+        // Actualizar la lista de productos después de eliminar el producto
+        this.products = this.products.filter((p: any) => p.id !== productId);
+  
+        // Realizar la validación después de la eliminación del producto
+        if (!this.productForm.valid) {
+          this.productForm.markAllAsTouched();
+          alert('Producto elimnado');
+        }
+      },
+      (errorData) => {
+        console.error(errorData);
+      }
+    );
+  }
+  
+  
+  
+  
 
 }
