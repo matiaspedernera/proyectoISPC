@@ -49,4 +49,9 @@ export class GetProductsService {
       this.saveProducts();
     }
   }
+
+  clearProducts() {
+    this.products = [];
+    localStorage.clear();
+  }
 }
