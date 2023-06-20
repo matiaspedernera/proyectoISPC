@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { SignupService } from '../../services/auth/signup.service';
-import { SignupRequest } from '../../services/auth/signupRequest';
+import { AuthService } from '../../services/auth/auth.service';
+import { SignupRequest } from '../../services/auth/authRequest';
 
 @Component({
   selector: 'app-signup',
@@ -22,7 +22,7 @@ export class SignupComponent {
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private signupService: SignupService
+    private authService: AuthService
   ) {}
 
   get email() {
@@ -46,7 +46,7 @@ export class SignupComponent {
 
   signup() {
     if (this.registerForm.valid) {
-      this.signupService.signup(this.registerForm.value as SignupRequest).subscribe({
+      this.authService.signup(this.registerForm.value as SignupRequest).subscribe({
         error: (errorData) => {
           alert('Email o Password erroneo.');
           console.error(errorData);
