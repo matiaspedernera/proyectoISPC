@@ -1,7 +1,8 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms'
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxPayPalModule } from 'ngx-paypal';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -12,8 +13,10 @@ import { CartaComponent } from './pages/carta/carta.component';
 import { HeaderComponent } from './shared/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
+import { SignupComponent } from './auth/signup/signup.component';
 import { ProductosComponent } from './pages/productos/productos.component';
+import { PagoComponent } from './pages/pago/pago.component';
+import { PedidosComponent } from './pages/pedidos/pedidos.component';
 
 @NgModule({
   declarations: [
@@ -25,16 +28,21 @@ import { ProductosComponent } from './pages/productos/productos.component';
     HeaderComponent,
     HomeComponent,
     LoginComponent,
-    RegisterComponent,
-    ProductosComponent
+    SignupComponent,
+    ProductosComponent,
+    PagoComponent,
+    PedidosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule,
+    NgxPayPalModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }

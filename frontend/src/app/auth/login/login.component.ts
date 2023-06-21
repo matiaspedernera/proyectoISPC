@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { LoginService } from '../../services/auth/login.service';
-import { LoginRequest } from '../../services/auth/loginRequest';
+import { AuthService } from '../../services/auth/auth.service';
+import { LoginRequest } from '../../services/auth/authRequest';
 
 @Component({
   selector: 'app-login',
@@ -14,10 +14,11 @@ export class LoginComponent {
     email: ['', [Validators.required, Validators.email]],
     password: ['', Validators.required],
   });
+  
   constructor(
     private formBuilder: FormBuilder,
     private router: Router,
-    private loginService: LoginService
+    private authService: AuthService
   ) {}
 
   get email() {
@@ -29,13 +30,17 @@ export class LoginComponent {
 
   login() {
     if (this.loginForm.valid) {
-      this.loginService.login(this.loginForm.value as LoginRequest).subscribe({
+      this.authService.login(this.loginForm.value as LoginRequest).subscribe({
+        next: (data) => {
+          localStorage.setItem('token', data.access);
+          localStorage.setItem('is_staff', data.user.is_staff);
+        },
         error: (errorData) => {
           alert('Email o Password erroneo.');
           console.error(errorData);
         },
         complete: () => {
-          this.router.navigateByUrl('/carta');
+          this.router.navigateByUrl('/productos');
         },
       });
     } else {
