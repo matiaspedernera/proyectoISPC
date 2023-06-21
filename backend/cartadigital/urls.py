@@ -13,6 +13,7 @@ urlpatterns = [
     url(r'^user/(?P<pk>[0-9]+)$', views.UserDetail.as_view()),
     url(r'^pedido$', views.PedidoList.as_view()),
     url(r'^pedido/(?P<pk>[0-9]+)$', views.PedidoDetail.as_view()),
+    url(r'^retornarPagado$', views.retornarPagado.as_view(), name='retornarPagado'),
 	]
 
 

@@ -9,7 +9,7 @@ from cartadigital.models import Usuario, Producto, Categoria
 
 # Create your views here.
 def inicioApi(request):
-    return HttpResponse("Bienvenido a la API de CartaDigtal")
+    return HttpResponse("<h1> Bienvenido a la API de CartaDigtal </h1>")
 
 def listaUsuarios(request):
     usuarios = list(Usuario.objects.values())
