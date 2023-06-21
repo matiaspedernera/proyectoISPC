@@ -20,6 +20,16 @@ export class GetProductsService {
     return this.products;
   }
 
+  editProduct(product: any): Observable<any> {
+    const url = `${this.productUrl}/${product.id}`;
+    return this.http.put<any>(url, product);
+  }
+
+  deleteProduct(productId: number): Observable<any> {
+    const url = `${this.productUrl}/${productId}?format=json`;
+    return this.http.delete<any>(url);
+  }
+
   createProduct(productData: any): Observable<any> {
     return this.http.post(this.productUrl, productData);
   }
